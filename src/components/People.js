@@ -36,8 +36,8 @@ class People extends React.Component {
         ]
         return (
             <>
-                <Container>
-                    <Header icon textAlign='center'>
+                <Container style={{backgroundImage: 'url(https://i.ytimg.com/vi/_kaqhy2iV7c/maxresdefault.jpg)'}}>
+                    <Header style={{fontSize: '4em'}} icon textAlign='center' color='yellow'>
                         <Icon name='users' circular />
                         People
                     </Header>

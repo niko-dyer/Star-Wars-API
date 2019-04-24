@@ -25,7 +25,7 @@ export default class Planets extends React.Component {
         ]
         return (
             <>
-                <Header icon textAlign='center'>
+                <Header style={{fontSize: '4em'}} icon textAlign='center' color='yellow'>
                     <Icon name='globe' circular />
                     Planets
                 </Header>

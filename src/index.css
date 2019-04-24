@@ -6,6 +6,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://i.ytimg.com/vi/_kaqhy2iV7c/maxresdefault.jpg') !important;
+  background-repeat: none !important;
+  background-size: cover !important;
 }
 
 code {

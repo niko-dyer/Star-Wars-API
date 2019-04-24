@@ -34,7 +34,7 @@ export default class Planet extends React.Component {
         return (
             <>
                 <Image centered circular size='medium' src={planetURL[Math.floor(Math.random()*planetURL.length)]} />
-                <Header textAlign='center'>
+                <Header style={{fontSize: '4em'}} color='yellow' textAlign='center'>
                     {this.state.planet.name}
                 </Header>
                 <Table celled>
