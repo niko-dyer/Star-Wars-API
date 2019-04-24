@@ -1,21 +1,18 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Header, Icon, Card } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-export default class Planets extends React.Component {
-    state = {
-        planets: []
-    }
+const Planets = () => {
+    const [planets, setPlanets] = useState([])
 
-    componentDidMount() {
+    useEffect( () => {
         let planetURL = 'https://swapi.co/api/planets'
-        axios
+        axios 
             .get(planetURL)
-            .then(res => this.setState({ planets: res.data.results }))
-    }
+            .then(res => setPlanets(res.data.results))
+    })
 
-    render() {
         const colors = [
             'red',
             'blue',
@@ -30,7 +27,7 @@ export default class Planets extends React.Component {
                     Planets
                 </Header>
                 <Card.Group centered>
-                    {this.state.planets.map((planet, i) => (
+                    {planets.map((planet, i) => (
                         <Card key={i} color={colors[Math.floor(Math.random() * colors.length)]} style={{ padding: '2em' }}>
                             <Link to={`/planets/${i}`}>
                                 <Card.Header style={{color: 'black'}}>
@@ -42,5 +39,6 @@ export default class Planets extends React.Component {
                 </Card.Group>
             </>
         )
-    }
 }
+
+export default Planets

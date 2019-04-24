@@ -37,13 +37,15 @@ export default class Planet extends React.Component {
                 <Header style={{fontSize: '4em'}} color='yellow' textAlign='center'>
                     {this.state.planet.name}
                 </Header>
-                <Table celled>
+                <Table inverted color='black' celled>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Climate</Table.HeaderCell>
                         <Table.HeaderCell>Gravity</Table.HeaderCell>
                         <Table.HeaderCell>Diameter</Table.HeaderCell>
                         <Table.HeaderCell>Rotation Period</Table.HeaderCell>
+                        <Table.HeaderCell>Population</Table.HeaderCell>
+                        <Table.HeaderCell>Terrain</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>
@@ -52,6 +54,8 @@ export default class Planet extends React.Component {
                         <Table.Cell>{this.state.planet.gravity}</Table.Cell>
                         <Table.Cell>{this.state.planet.diameter}</Table.Cell>
                         <Table.Cell>{this.state.planet.rotation_period}</Table.Cell>
+                        <Table.Cell>{this.state.planet.population}</Table.Cell>
+                        <Table.Cell>{this.state.planet.terrain}</Table.Cell>
                     </Table.Row>
                 </Table.Body>
                 </Table>
